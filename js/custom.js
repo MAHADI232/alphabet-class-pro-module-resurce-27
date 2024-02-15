@@ -62,8 +62,6 @@ function handleKeyBoardPress(event){
        const keyAlphabet = keyPressDisplay('display-show');
        //check match or not or yes control
        if(keyPressed === keyAlphabet){
-            console.log('i got a point ')
-            console.log('you typing :',keyPressed);
             removeBackgroundById(keyAlphabet)
             continueGame() 
               //update score.
@@ -74,7 +72,6 @@ function handleKeyBoardPress(event){
 
        }else{
                //step -1 : get the current life count .
-              console.log('you are wrong type');
               const lifeScore = getTextElementById('current-life');
               const changeLifeScore =  lifeScore -1;
               setTextElementValueById('current-life',changeLifeScore)
@@ -83,8 +80,6 @@ function handleKeyBoardPress(event){
               gameOver()
            }   
        }
-       
-     
 
 }
  document.addEventListener('keyup',handleKeyBoardPress);
@@ -114,6 +109,13 @@ function play(e){
     continueGame()
 }
  function gameOver(){
+       //get the final score
        hideElementById('playground-section');
-       showElementById('score-element')   
+       showElementById('score-element') ;
+       const lastElementScore = getElementByTextId('current-score')  
+       setTextElementValueById('gameTotalScore',lastElementScore)
+
+       //cleare the last selected
+       const clerLastSelect = getElementByTextId('display-show')
+       removeBackgroundById(clerLastSelect)
  }
