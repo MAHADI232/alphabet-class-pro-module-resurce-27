@@ -27,16 +27,16 @@
     <main class="">
         <!-- home screen -->
         <section id="home-screen" class=" min-h-screen text-white flex flex-col justify-center items-center gap-4">
-             <h1 class="text-8xl uppercase font-bold">Alpha clash Pro</h1>
-             <p class="text-xl font-bold">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+             <h1 class="text-8xl text-center line-clamp-3  sm:p-0 sm:text-8xl uppercase font-bold">Alpha clash Pro</h1>
+             <p class="text-2xl text-center mt-5">Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
              <button onclick="play()" class="btn capitalize mt-4 bg-white text-black text-2xl">play now</button>
         </section>
 
         <!-- play ground screen start-->
-        <section    id="playground-section" class="hidden">
+        <section    id="playground-section" class="hidden pt-12">
             <!--screen-->
-            <div class=" flex justify-center items-center py-10">
-                <div class="artboard artboard-horizontal phone-6 border-[10px] border-slate-700 rounded-2xl bg-[#FFFFFFB3]">
+            <div class=" p-4 px-1 flex justify-center items-center py-10">
+                <div class=" artboard artboard-horizontal phone-6 border-[10px] border-slate-700 rounded-2xl bg-[#FFFFFFB3]">
                         <div class="flex justify-center">
                             <p class=" bg-slate-900 px-2 py-1 text-white  rounded-sm">don't a watch keybord while playing...</p>
                         </div>
@@ -84,7 +84,7 @@
             </div><!--keyboard end-->
           
             <!--life-->
-            <div class=" flex gap-8 justify-around  items-center">
+            <div class=" pt-24 flex gap-8 justify-around  items-center">
                 <button class="btn">
                     <span>Life</span>
                     <img    class="text-rose-300" src="images/Vector.svg" alt="">
@@ -101,10 +101,10 @@
         </section><!--play ground end-->
 
         <!-- score start -->
-        <section id="score-element" class=" hidden score flex flex-col justify-center items-center min-h-screen ">
-                <div class=" flex flex-col justify-center items-center rounded-xl score-div space-y-4">
+        <section id="score-element" class="  hidden score flex flex-col justify-center items-center min-h-screen ">
+                <div class="  flex flex-col justify-center items-center rounded-xl score-div space-y-4">
                   <h1 class="capitalize text-4xl">game over !</h1>
-                    <h1 class="text-8xl text-black">
+                    <h1 class=" text-6xl  lg:text-8xl  text-black">
                         <span class="font-bold capitalize">score :</span>
                         <span id="gameTotalScore">14</span>
                     </h1>
