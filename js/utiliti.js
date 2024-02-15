@@ -15,6 +15,19 @@ function showElementById(elementId1){
     const showElement = document.getElementById(elementId1)
       showElement.classList.remove('hidden')
 }
+
+function setBackgroundById(element){
+  const addBackgroundByColor = document.getElementById(element);
+  const keybackgroundColor = addBackgroundByColor.classList.add('bg-green-500')
+  return keybackgroundColor
+
+}
+
+function removeBackroundById(element){
+      const  removeBackroundById = document.getElementById(element)
+      const keyRemiveColor = removeBackroundById.classList.remove('')
+      return keyRemiveColor
+}
  function getRandomAlphabet(){
      // get or create an alphabets array.
     const alphabetString ='abcdefghijklmnopqrstuvwxyz';

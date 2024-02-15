@@ -18,18 +18,44 @@
 //     const alphabetKay = alphabets[index]
 //      return alphabetKay
 // }
+ function handleKeyBoardPress(event){
+              const keyPressed = event.key;
+
+              const keyPressDisplay = document.getElementById('display-show')
+              const currentAlphabet = keyPressDisplay.innerText;
+               const keyAlphabet = currentAlphabet.toLowerCase();
+            
+              //check match or not or yes control
+              if(keyPressed === keyAlphabet){
+                    console.log('you are got a poin' )
+                    continueGame();
+                    removeBackroundById(keyAlphabet)
+              }else{
+                console.log('varry sad or bad point')
+              }
+           
+ }
+ document.addEventListener('keyup',handleKeyBoardPress);
 
 function continueGame(){
        //step-1. genarate a random alphabet
-          const alphabet = getRandomAlphabet()
-        //randomly genaraed alphabet to the sceen (show it)
-        const currentGenarateAlphabetElement = document.getElementById('display-show')
-              currentGenarateAlphabetElement.innerText =alphabet
+          const alphabet = getRandomAlphabet();
+          //randomly genaraed alphabet to the sceen (show it)
+    const      currentGenarateAlphabetElement = document.getElementById('display-show');
+               currentGenarateAlphabetElement.innerText =alphabet;
+         // key backroundolor change
+          setBackgroundById(alphabet);
+          removeBackroundById(alphabet)
+        
+
+              
     }
+
 
 function play(e){
     hideElementById('home-screen')
     showElementById('playground-section')
+    // handleKeyBoardPress()
     continueGame()
 
 }
