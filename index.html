@@ -41,7 +41,7 @@
                             <p class=" bg-slate-900 px-2 py-1  rounded-sm">don't a watch keybord while playing...</p>
                         </div>
                         <div class="flex  justify-center items-center h-20">
-                           <h1 id="display-show" class="text-8xl font-bold pt-36 text-black">Y</h1>
+                           <h1 id="display-show" class="text-8xl font-bold pt-36 text-black uppercase">Y</h1>
                         </div>
                         
                 </div>
@@ -84,29 +84,30 @@
             </div><!--keyboard end-->
           
             <!--life-->
-            <div class=" text-white flex gap-8 justify-around  items-center">
+            <div class=" flex gap-8 justify-around  items-center">
                 <button class="btn">
                     <span>Life</span>
                     <img    class="text-rose-300" src="images/Vector.svg" alt="">
-                    <span>1</span>
+                    <span id="current-life">3</span>
                 </button>
+                <!-- display score -->
                 <button class="btn ">
                     <span>score</span>
                     <img src="images/offline_bolt (1).svg" alt="">
-                    <span>1</span>
+                    <span id="current-score">0</span>
                 </button>
 
             </div>
         </section><!--play ground end-->
 
         <!-- score start -->
-        <section class=" hidden score flex flex-col justify-center items-center min-h-screen ">
+        <section id="score-element" class=" hidden score flex flex-col justify-center items-center min-h-screen ">
                 <div class=" flex flex-col justify-center items-center rounded-xl score-div space-y-4">
                     <h1 class="text-8xl text-black">
                         <span class="font-bold">score :</span>
                         <span>14</span>
                     </h1>
-                    <button class="btn bg-red-500 text-2xl text-white pb-1">play agin</button>
+                    <button onclick="play()" class="btn bg-red-500 text-2xl text-white pb-1">play agin</button>
                     <p class="text-slate-100">Practice will make you Pro</p>
                 </div>
         </section>

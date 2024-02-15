@@ -11,6 +11,7 @@ function hideElementById(elementId){
         element.classList.add('hidden')
 
 }
+
 function showElementById(elementId1){
     const showElement = document.getElementById(elementId1)
       showElement.classList.remove('hidden')
@@ -18,16 +19,36 @@ function showElementById(elementId1){
 
 function setBackgroundById(element){
   const addBackgroundByColor = document.getElementById(element);
-  const keybackgroundColor = addBackgroundByColor.classList.add('bg-green-500')
-  return keybackgroundColor
+        const setBaakround =  addBackgroundByColor.classList.add('bg-green-500');
+        return setBaakround
+}
+
+function removeBackgroundById(element){
+  const addBackgroundByColor = document.getElementById(element);
+        addBackgroundByColor.classList.remove('bg-green-500')       
+}
+
+function keyPressDisplay(elementId){
+    const keyPressDisplay = document.getElementById(elementId)
+    const keyAlphabetText = keyPressDisplay.innerText;
+    const keyalphabet = keyAlphabetText.toLowerCase();
+    return keyalphabet;
 
 }
 
-function removeBackroundById(element){
-      const  removeBackroundById = document.getElementById(element)
-      const keyRemiveColor = removeBackroundById.classList.remove('')
-      return keyRemiveColor
+function getTextElementById(elementId){
+      const  element = document.getElementById(elementId);
+      const  elementValueText = element.innerText ;
+      const  value = parseInt(elementValueText);
+      return value;
 }
+
+function setTextElementValueById(elementId,value){
+  const  element = document.getElementById(elementId);
+         element.innerText = value ;
+}
+
+
  function getRandomAlphabet(){
      // get or create an alphabets array.
     const alphabetString ='abcdefghijklmnopqrstuvwxyz';
@@ -38,4 +59,13 @@ function removeBackroundById(element){
      const alphabet = alphabets[index]  ;
      return alphabet 
  }
+// function getRandomAlphabet(){
+//         const alphabetString ='abcdefghijklmnopqrstuvwxyz';
+//         const alphabets = alphabetString.split('');
+//         const alphabetsNumber = Math.random()*25;
+//         const index = Math.round(alphabetsNumber);
+//         const alphabet =alphabets[index]
+//         return alphabet
+//       }
+
 
